@@ -12,3 +12,15 @@ def save(milestone):
     id = results[0]['id']
     milestone.id = id
     return milestone
+
+def select_all():
+    milestones = []
+
+    sql = "SELECT * FROM milestones"
+    results = run_sql(sql)
+
+    for row in results:
+        goal = goal_repository.select(row['goal_id'])
+        milestones = Milestone(row['mile_title'],  row['mile_desc'], row['mile_position'], row['mile_date'], row['goal_id'], goal )
+        milestones.append(milestones)
+    return milestones

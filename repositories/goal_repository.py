@@ -20,6 +20,6 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        goal = Goal(row['title'], row['description'], row['position'], row['event_date'], row['id'] )
+        goal = Goal(row['id'], row['title'], row['description'], row['position'], row['event_date'], )
         goals.append(goal)
     return goal
