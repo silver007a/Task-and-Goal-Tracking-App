@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-testing HOMEPAGE
+testing HOMEPAGE 
 {% for milestone in all_milestones %}
   <div class="milestone">
     <div class="content">
       {{milestone.mile_title}}
       <div class="description">
         <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}
-        <span class="duration">{{milestone.mile_desc}} mins</span>
+        <span class="duration">{{milestone.mile_desc}}</span>
         
       </div>
       <div class="buttons">

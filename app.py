@@ -1,9 +1,9 @@
 from flask import Flask, render_template
-from controllers.goals_controllers import goals_blueprint
+from controllers.milestone_controllers import milestone_blueprint
 
 app = Flask(__name__)
 
-app.register_blueprint(goals_blueprint)
+app.register_blueprint(milestone_blueprint)
 
 @app.route('/')
 def home():
