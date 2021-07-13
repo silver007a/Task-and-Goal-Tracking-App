@@ -78,9 +78,10 @@ article {
 section {
   display: grid; 
   grid-template-columns: 100%; 
-  grid-template-rows: 2fr 4fr 6fr 1fr 1fr; 
+  grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.5fr 0.5; 
   gap: 0px 0px; 
   grid-template-areas: 
+    "."
     "."
     "."
     "."
