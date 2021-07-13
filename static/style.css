@@ -68,7 +68,7 @@ article {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  flex-basis: 22%;
+  flex-basis: 10%;
   background: rgb(41, 2, 131);
   
   /* -webkit-flex-wrap: wrap;
@@ -76,18 +76,22 @@ article {
   /* max-width: 900px; */
 }
 section {
+
   display: grid; 
-  grid-template-columns: 100%; 
-  grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 0.5fr 0.5; 
-  gap: 0px 0px; 
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40px 30px auto 30px 20px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  justify-items: stretch;
+  align-items: start;
   grid-template-areas: 
-    "."
-    "."
-    "."
-    "."
-    "."
-    "."; 
-  margin: 0 0 20px 0;
+    "goal_desc goal_desc"
+    "mile_title mile_title"
+    "mile_date mile_date"
+    "mile_desc mile_desc"
+    "completed mile_position"; 
+    
+  margin: 0 20px 20px 0;
   padding: 0px 10px 10px 10px;
   background: rgb(149, 189, 6);
   text-align: left;
@@ -95,7 +99,7 @@ section {
   
   border: 5px solid black;
   /* width: 33%; */
-  flex-basis: 20%;
+  flex-basis: 10%;
   flex-grow: 1;
   }  
   
@@ -113,15 +117,11 @@ section {
   grid-area: nav; 
   }
 
-.description {
-  padding: 7px 3 5 3;
-  text-align: left;
-  
-  }
+
 
 
 /* Stack the layout on small devices/viewports. */
-@media all and (max-width: 575px) {
+/* @media all and (max-width: 575px) {
   body { 
     grid-template-areas: 
       "header"
@@ -131,7 +131,7 @@ section {
     grid-template-rows: 80px 1fr 70px 1fr 70px;  
     grid-template-columns: 1fr;
   }
-}
+} */
 
 nav {
   display: flex;
@@ -181,22 +181,74 @@ li a:hover {
     }
 
 .goal_desc{
-  font-size: 20px;
+  font-size: 14px;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   height: auto;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 3;
   }
 
-
-
 .mile_title{
-  font-size: 24px;
+  font-size: 14px;
   text-decoration: none;
   text-align: center;
   height: auto;
-  }
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 3;
+}
+
 .mile_title a{
   text-decoration: none;
   color: brown;
+  }
+
+.mile_desc{
+  font-size: 14px;
+  text-decoration: none;
+  text-align: left;
+  height: auto;
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-row-end: 4;
+  grid-column-end: 3;
+  }
+
+.mile_date{
+  font-size: 14px;
+  text-decoration: none;
+  text-align: left;
+  height: auto;
+  grid-row-start: 4;
+  grid-column-start: 1;
+  grid-row-end: 5;
+  grid-column-end: 3;
+
+  }
+
+.completed{
+  font-size: 14px;
+  text-decoration: none;
+  text-align: left;
+  height: auto;
+  grid-row-start: 5;
+  grid-column-start: 1;
+  grid-row-end: 6;
+  grid-column-end: 2;
+  }
+
+.mile_position{
+  font-size: 14px;
+  text-decoration: none;
+  text-align: right;
+  height: auto;
+  grid-row-end: 5;
+  grid-column-end: 2;
+  grid-row-end: 6;
+  grid-column-end: 3;
   }
