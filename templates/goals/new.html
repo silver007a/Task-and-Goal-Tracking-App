@@ -1,4 +1,34 @@
-{% extends "base.html" %}
+{%  extends "base.html" %}
+
 {% block content %}
-New goal Testing... testing.
-{% endblock %}
+Add new milestone
+<form action="/goals" method="post">
+    <div>
+        <label for="mile_title">Title</label>
+        <input type="text" id="mile_title" name="mile_title">
+    </div>
+    <div>
+        <label for="mile_desc">Description</label>
+        <input type="text" id="mile_desc" name="mile_desc">
+    </div>
+    <div>
+        <label for="mile_position">Position</label>
+        <input type="text" id="mile_position" name="mile_position">
+    </div>
+    <div>
+        <label for="mile_date">Date</label>
+        <input type="text" id="mile_date" name="mile_date">
+    </div>
+ 
+    <!-- <div>
+        <label for="completed">Completed</label>
+        <select name="completed" id="completed">
+            <option value="true">True</option>
+            <option value="false" selected>False</option>
+        </select>
+    </div> -->
+
+    
+    <button type="submit">Add task</button>
+</form>
+{%  endblock %}

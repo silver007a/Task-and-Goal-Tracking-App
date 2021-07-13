@@ -8,8 +8,8 @@
   <title>My Task List</title>
 </head>
 <body>
-  <header>
-    <nav>
+  <header id="pageHeader">
+    <nav id="mainNav">
       <ul class="menu">
         <li><a href="/">Homepage</a></li>
         <li><a href="/goals/financial">Financial</a></li>
@@ -21,9 +21,9 @@
       </ul>
     </nav>
   </header>
-  <div class="container">
+  <main id="main">
     {% block content %}
     {% endblock %}
-  </div>
+  </main>
 </body>
 </html>

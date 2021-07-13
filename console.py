@@ -5,9 +5,9 @@ from models.goal import Goal
 import repositories.milestone_repository as milestone_repository
 import repositories.goal_repository as goal_repository
 
+milestone_repository.delete_all()
+goal_repository.delete_all()
 
-# goal_repository.delete_all()
-# milestone_repository.delete_all()
 
 goal1 = Goal("Visit Therme, Romania", "Arrange family trip", 1, "2021-11-12")
 goal_repository.save(goal1)
