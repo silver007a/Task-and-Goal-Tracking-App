@@ -4,43 +4,27 @@
 <p>A list of milestones</p>
 
 {% for milestone in all_milestones %}
-<div class="milestone">
-  <div class="content">
+
+  <section id="section">
   
     <div class="description">
       <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}</a>
       <span class="duration">{{milestone.mile_desc}}</span>
       
     </div>
-    <div class="buttons">
+    <div class="completed">
 
       <form action="/goals/{{milestone.id}}/delete" method="POST">
-        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+        <button class="completed"></button>
       </form>
       
    
     </div>
-  </div>
-</div>
+  </section>
+  <hr>
 
-<div class="milestone">
-  <div class="content">
-  
-    <div class="description">
-      <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}</a>
-      <span class="duration">{{milestone.mile_desc}}</span>
-      
-    </div>
-    <div class="buttons">
 
-      <form action="/goals/{{milestone.id}}/delete" method="POST">
-        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-      </form>
-      
-   
-    </div>
-  </div>
-</div>
+
 {% endfor %}
 
 {% endblock %}

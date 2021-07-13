@@ -4,6 +4,17 @@
 Add new milestone
 <form action="/goals" method="post">
     <div>
+        <label for="goal">Goal:</label>        
+        <select name="goal_id" id="goal_id">
+            
+            {% for goal in all_goals %}
+                <option value="{{goal.id}}">{{goal.title}}</option>
+            {% endfor %}
+            
+        </select>
+
+    </div>
+    <div>
         <label for="mile_title">Title</label>
         <input type="text" id="mile_title" name="mile_title">
     </div>
@@ -19,6 +30,8 @@ Add new milestone
         <label for="mile_date">Date</label>
         <input type="text" id="mile_date" name="mile_date">
     </div>
+
+    
  
     <!-- <div>
         <label for="completed">Completed</label>

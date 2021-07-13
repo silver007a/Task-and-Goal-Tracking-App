@@ -1,25 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-testing HOMEPAGE 
-{% for milestone in all_milestones %}
-  <div class="milestone">
-    <div class="content">
-      {{milestone.mile_title}}
-      <div class="description">
-        <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}
-        <span class="duration">{{milestone.mile_desc}}</span>
-        
-      </div>
-      <div class="buttons">
+<h2>All milestones</h2>
+<p>A list of milestones</p>
 
-        <form action="/goals/{{milestone.id}}/delete" method="POST">
-          <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-        </form>
-        
-     
-      </div>
+{% for milestone in all_milestones %}
+
+  <section id="section">
+  
+    <div class="description">
+      <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}</a>
+      <span class="duration">{{milestone.mile_desc}}</span>
+      
     </div>
-  </div>
+    <div class="completed">
+
+      <form action="/goals/{{milestone.id}}/delete" method="POST">
+        <button class="completed"></button>
+      </form>
+      
+   
+    </div>
+  </section>
+  <hr>
+
+
+
 {% endfor %}
 
 {% endblock %}

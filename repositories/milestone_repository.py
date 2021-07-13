@@ -21,7 +21,7 @@ def select_all():
 
     for row in results:
         goal = goal_repository.select(row['goal_id'])
-        milestones = Milestone(row['mile_title'],  row['mile_desc'], row['mile_position'], row['mile_date'], row['goal_id'], goal )
+        milestones = Milestone(row['mile_title'],  row['mile_desc'], row['mile_position'], row['mile_date'], goal, row['id'])
         milestone.append(milestones)
     return milestone
 
@@ -34,7 +34,7 @@ def select(id):
 
     if result is not None:
         goal = goal_repository.select(result['goal_id'])
-        milestone = Milestone(result['mile_title'], result['mile_desc'], result['mile_position'], result['mile_date'], result['goal_id'], goal )
+        milestone = Milestone(result['mile_title'], result['mile_desc'], result['mile_position'], result['mile_date'], goal, result['id'])
     return milestone
 
 

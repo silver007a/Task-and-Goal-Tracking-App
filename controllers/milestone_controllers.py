@@ -7,6 +7,12 @@ from flask import Blueprint
 
 milestone_blueprint = Blueprint("milestone", __name__)
 
+
+# @milestone_blueprint.route("/goals/home")
+# def milestones():
+#     milestones = milestone_repository.select_all()
+#     return render_template("goals/home.html", all_milestones = milestones)
+
 # INDEX
 # GET '/milestone'
 @milestone_blueprint.route("/goals")
@@ -19,9 +25,9 @@ def milestones():
 # GET '/goals/new'
 @milestone_blueprint.route("/goals/new")
 def new_milestone():
-    goals = goal_repository.select_all()
+    goal = goal_repository.select_all()
    
-    return render_template("goals/new.html", all_goals=goals)
+    return render_template("goals/new.html", all_goals=goal)
 
 
 # CREATE

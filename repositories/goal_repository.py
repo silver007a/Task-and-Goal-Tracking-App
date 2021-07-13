@@ -20,9 +20,9 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        goal = Goal(row['id'], row['title'], row['description'], row['position'], row['event_date'], )
+        goal = Goal(row['title'], row['description'], row['position'], row['event_date'], row['id'] )
         goals.append(goal)
-    return goal
+    return goals
 
 
 def select(id):
@@ -32,17 +32,17 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        goal = Goal(result['id'], result['title'], result['description'], result['position'], result['event_date'] )
+        goal = Goal(result['title'], result['description'], result['position'], result['event_date'], result['id'] )
     return goal
 
 
 def delete_all():
-    sql = "DELETE  FROM goals"
+    sql = "DELETE FROM goals"
     run_sql(sql)
 
 
 def delete(id):
-    sql = "DELETE  FROM goals WHERE id = %s"
+    sql = "DELETE FROM goals WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 

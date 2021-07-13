@@ -2,12 +2,12 @@
 {% block content %}
 
   <div>
-    <p>{{goal.title}}</p>
+    <p>{{milestone.goal.title}}</p>
     <p>{{milestone.mile_title}}</p>
     <hr>
     <p>{{milestone.mile_desc}}</p>
     <p>{{milestone.mile_date}} mins</p>
-    <p>Completed? {{milestone.completed}}</p>
+  
     <p><a href="/goals/{{milestone.id}}/edit">Edit</a></p>
   </div>
 
