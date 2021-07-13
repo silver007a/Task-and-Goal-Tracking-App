@@ -73,9 +73,9 @@ def update_milestone(id):
     mile_date = request.form["mile_date"]
     goal_id = request.form["goal_id"]
     goal = goal_repository.select(goal_id)
-    milestone = Milestone(mile_title, mile_desc, mile_position, mile_date, goal)
+    milestone = Milestone(mile_title, mile_desc, mile_position, mile_date, goal, id)
     milestone_repository.update(milestone)
-    return redirect('/goals')
+    return redirect('/')
     
 # DELETE
 # DELETE '/goals/<id>'

@@ -1,21 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>All milestones</h2>
-<p>A list of milestones</p>
+
 
 {% for milestone in all_milestones %}
 
   <section id="section">
-  
-    <div class="description">
-      <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}</a>
-      <span class="duration">{{milestone.mile_desc}}</span>
-      
+    <div class="goal_desc">
+      <p>{{milestone.goal.title}}</p>
     </div>
+
+    <div class="mile_title">
+      <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}</a>
+    </div>
+
+    <div class="mile_desc">
+      <p>{{milestone.mile_desc}}</p>
+    </div>
+     
+    <div class="mile_position">
+      <p>{{milestone.mile_position}}</p>
+    </div>
+
+    <div class="mile_date">
+      <p>{{milestone.mile_date}}</p>
+    </div>
+    
     <div class="completed">
 
       <form action="/goals/{{milestone.id}}/delete" method="POST">
-        <button class="completed"></button>
+        <button class="completed">Completed</button>
       </form>
       
    

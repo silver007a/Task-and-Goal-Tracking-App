@@ -1,4 +1,8 @@
-p { font-size: 110%; color: rgb(41, 41, 41); }
+p {
+    font-size: 110%; 
+    color: rgb(41, 41, 41); 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
 
 h1, h2, h3 {
     display: block;
@@ -28,13 +32,13 @@ body {
       "footer footer footer";
     /* grid-template-rows: 80px 1fr 70px;   */
     grid-template-columns: 1fr 20% 15%;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
     /* height: 100vh; */
     margin: 0;
     }  
 header, nav{
-    padding: 5px;
+    /* padding: 5px; */
     background: gold;
     }
 footer {
@@ -43,16 +47,14 @@ footer {
     }
 
 main {
-    padding: 5px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     background: rgb(238, 238, 238);
     }
 button {
-  background-image: url('img/completed.png');
-  background-repeat: no-repeat;
-  height: 19px;
-  width: 162px;
- 
-    }
+  font-size: 110%;
+  background: rgb(149, 189, 6);
+  
+    } 
 
 /* article {
   margin: 0 0 20px 0;
@@ -112,11 +114,37 @@ nav {
   display: flex;
   justify-content: center;
 }
-ul {
+nav ul {
     display: flex;
     list-style-type: none;
     } 
-a {
-      padding: 1rem 2rem;
+nav ul {
+    /* padding: 1rem 2rem; */
+    color: rgb(26, 26, 26);
+    text-align: center;
+    /* padding: 4px 16px; */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  
     }
+
+li {
+      float: left;
+    }
+li a {
+    display: block;
+    color: rgb(43, 43, 43);
+    text-align: center;
+    padding: 35px 15px 35px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    }
+    
+    /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: rgb(206, 175, 0);
+    
+    }
+
  

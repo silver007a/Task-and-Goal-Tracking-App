@@ -5,6 +5,7 @@ import repositories.milestone_repository as milestone_repository
 app = Flask(__name__)
 
 app.register_blueprint(milestone_blueprint)
+#appregister (goals_blue) and new goals_contoller and html pages is all that's needed
 
 @app.route('/')
 def home():
