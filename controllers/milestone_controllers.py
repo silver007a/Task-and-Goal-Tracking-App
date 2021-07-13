@@ -42,7 +42,7 @@ def create_milestone():
     goal = goal_repository.select(goal_id)
     new_milestone = Milestone(mile_title, mile_desc, mile_position, mile_date, goal)
     milestone_repository.save(new_milestone)  
-    return redirect("/goals")
+    return redirect("/")
 
 
 

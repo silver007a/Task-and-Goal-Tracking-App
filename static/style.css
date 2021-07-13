@@ -1,21 +1,23 @@
 p {
     font-size: 110%; 
     color: rgb(41, 41, 41); 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: sans-serif;
   }
 
-h1, h2, h3 {
+h1, h2, h3, li, a {
     display: block;
-    padding: 5px 0px 20px 10px;
-   font-weight: bold;
+    padding: 0px 0px 20px 10px;
+    font-family: sans-serif;
     }
 
 h1 {
   font-size: 2em;
+ 
     }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 20px;
+    text-transform: uppercase;
     }
 h3 {
      font-size: 1.17em;
@@ -25,13 +27,13 @@ h3 {
   /* FLEXBOX */
 
 body { 
-    display: grid;
+    display: grid ;
     grid-template-areas: 
       "header header header"
       "main main main"
       "footer footer footer";
     /* grid-template-rows: 80px 1fr 70px;   */
-    grid-template-columns: 1fr 20% 15%;
+    grid-template-columns: auto auto auto;
     grid-row-gap: 0px;
     grid-column-gap: 0px;
     /* height: 100vh; */
@@ -61,13 +63,41 @@ button {
   padding: 20px 10px 5px 10px;
   background: rgb(167, 2, 2);
   }   */
-
+article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-basis: 22%;
+  background: rgb(41, 2, 131);
+  
+  /* -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; */
+  /* max-width: 900px; */
+}
 section {
+  display: grid; 
+  grid-template-columns: 100%; 
+  grid-template-rows: 2fr 4fr 6fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "."
+    "."
+    "."
+    "."
+    "."; 
   margin: 0 0 20px 0;
-  padding: 20px 10px 5px 10px;
+  padding: 0px 10px 10px 10px;
   background: rgb(149, 189, 6);
   text-align: left;
+  /* flex: 0 0 0 20%; */
+  
+  border: 5px solid black;
+  /* width: 33%; */
+  flex-basis: 20%;
+  flex-grow: 1;
   }  
+  
 #header {
   grid-area: header;
   }
@@ -80,14 +110,6 @@ section {
   }
 #side { 
   grid-area: nav; 
-  }
-
-#section {
-  margin: 0 0 20px 0;
-  padding: 20px 10px 5px 10px;
-  background: rgb(149, 189, 6);
-  align-self: left;
-  justify-self: left;
   }
 
 .description {
@@ -131,7 +153,15 @@ nav ul {
 
 li {
       float: left;
+      border-right:1px solid crimson;
+      border-left:1px solid crimson;
+      width: 200px;
     }
+
+li:last-child {
+    border-left: none;
+    }
+
 li a {
     display: block;
     color: rgb(43, 43, 43);
@@ -139,7 +169,9 @@ li a {
     padding: 35px 15px 35px 15px;
     text-decoration: none;
     text-transform: uppercase;
+   
     }
+
     
     /* Change the link color to #111 (black) on hover */
 li a:hover {
@@ -147,4 +179,23 @@ li a:hover {
     
     }
 
- 
+.goal_desc{
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  height: auto;
+  }
+
+
+
+.mile_title{
+  font-size: 24px;
+  text-decoration: none;
+  text-align: center;
+  height: auto;
+  }
+.mile_title a{
+  text-decoration: none;
+  color: brown;
+  }

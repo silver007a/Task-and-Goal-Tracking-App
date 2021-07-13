@@ -2,7 +2,7 @@
 {% block content %}
 <h2>All milestones</h2>
 
-
+<article>
 {% for milestone in all_milestones %}
 
   <section id="section">
@@ -35,10 +35,11 @@
    
     </div>
   </section>
+
   <hr>
 
 
 
 {% endfor %}
-
+</article>
 {% endblock %}
