@@ -38,33 +38,7 @@ header, nav{
 }
 
 
-section {
 
-  display: grid; 
-  grid-template-columns: 50% 50%;
-  /* grid-template-rows: 40px 40px 110px 50px 20px; */
-  /* grid-column-gap: px; */
-  grid-row-gap: 5px;
-  justify-items: stretch;
-  align-items: auto;
-  grid-template-areas: 
-    "goal_desc goal_desc"
-    "mile_title mile_title"
-    "mile_desc mile_desc"
-    "mile_date mile_date"
-    "completed mile_position"; 
-  
-  margin: 0 20px 20px 0;
-  padding: 0px 10px 20px 10px;
-  background: #ffffff;
-  text-align: left;
-  border-radius: 3%;
-  -webkit-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.23); 
-  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.23);
-  width:225px;
-  height: 290px;
- 
-  }  
   .button {
     box-shadow: 0px 1px 0px 0px #fff6af;
     background:linear-gradient(to bottom, #ffec64 5%, gold 100%);
@@ -159,102 +133,100 @@ li a:hover {
 
 #scotland-section .goal_desc p{
   color:#3E13AF;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: large;
   }
 #france-section .goal_desc p{
   color: rgb(121, 0, 115);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: large;
   }
 
 #romania-section .goal_desc p{
   color: #005727;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: large;
   
   }
 
 article2 section{
   background-color: rgb(252, 252, 252);
 }
-
+section {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  margin: 10px;
+  padding: 0px 10px 20px 10px;
+  background: #ffffff;
+  text-align: left;
+  border-radius: 3%;
+  -webkit-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.23); 
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.23);
+  width:225px;
+  height: 290px;
+ 
+  }  
 .goal_desc{
-  font-size: 14px;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  height: auto;
-  grid-row-start: 1;
-  grid-column-start: 1;
-  grid-row-end: 2;
-  grid-column-end: 3;
-  
-  padding: 0px 0 10px 0;
-  border-bottom: rgba(126, 126, 126, 0.92) 1px solid;
+display: flex;
+flex-wrap: wrap;
+height: 30px;
   }
 
+.mile_position{
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+      
+      }
+.mile_date{
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+
+  }
 .mile_title{
-  font-size: 14px;
+  
   text-decoration: none;
   text-align: center;
-  height: auto;
-  grid-row-start: 2;
-  grid-column-start: 1;
-  grid-row-end: 3;
-  grid-column-end: 3;
-  padding: 10px 0 10px 0;
-  border-bottom: rgba(126, 126, 126, 0.92) 1px solid;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  height: 40px;
+  
 }
 
 .mile_title a{
   text-decoration: none;
-  color: rgb(9, 9, 9);
+  color: rgb(55, 55, 55);
   }
 
 .mile_desc{
-  font-size: 14px;
-  text-decoration: none;
-  text-align: left;
-  height: auto;
-  grid-row-start: 3;
-   grid-column-start: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 10;
+  text-align: center;
+}
+ 
 
-   grid-row-end: 4;
-   grid-column-end: 3;
-   padding: 0px 0 10px 0;
-   /* border-bottom: rgba(126, 126, 126, 0.92) 1px solid; */
-  }
 
-.mile_date{
-  font-size: 14px;
-  text-decoration: none;
-  text-align: left;
-  height: auto;
-  grid-row-start: 4;
-   grid-column-start: 1;
-
-   grid-row-end: 5;
-   grid-column-end: 3;
-   justify-content: left;  
-   padding: 10px 0 10px 0;
-  }
-
-.mile_position{
-  font-size: 14px;
-  text-decoration: none;
-  text-align: right;
-  height: auto;
-  grid-row-start: 5;
-  grid-column-start: 2;
-  grid-row-end: 6;
-  grid-column-end: 3;
-  padding: 0px 20px 0px 0;
-  }
 
   .completed{
   font-size: 14px;
   text-decoration: none;
   text-align: left;
   height: auto;
-  grid-row-start: 5;
-  grid-column-start: 1;
-  grid-row-end: 6;
-  grid-column-end: 2;
+  display: flex;
+  flex-wrap: wrap;
+  height: 15px;
+  justify-content: left;
   padding: 0px 0px 0px 0;
   }
 

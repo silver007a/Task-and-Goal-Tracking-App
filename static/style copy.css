@@ -1,156 +1,48 @@
-p {
-    font-size: 14px; 
-    color: rgb(41, 41, 41); 
-    font-family: sans-serif;
+
+ 
+header, nav{
+  /* padding: 5px; */
+  background: gold;
   }
 
-h1, h2, h3, li, a {
-    display: block;
-    padding: 0px 0px 0px 0px;
-    font-family: sans-serif;
-    }
-
-h1 {
-  font-size: 2em;
-  
- 
-    }
-
-h2 {
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: normal;
-    }
-h3 {
-     font-size: 1.17em;
-    }
-
-
-  /* FLEXBOX */
-
-body { 
-    display: grid ;
-    grid-template-areas: 
-      "header header header"
-      "main main main"
-      "footer footer footer";
-    /* grid-template-rows: 80px 1fr 70px;   */
-    grid-template-columns: auto auto auto;
-    grid-row-gap: 0px;
-    grid-column-gap: 0px;
-    /* height: 100vh; */
-    margin: 0;
-  }  
-main { 
-    display: grid ;
-    grid-template-areas: 
-      "section1 section2 section3";
-     
-    /* grid-template-rows: 80px 1fr 70px;   */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 0px;
-    grid-column-gap: 50px;
-    /* height: 100vh; */
-    margin: 0;
-    padding: 50px 20px 20px 20px;
-    background: #ebecf0;
-  }  
-
+#main-section {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  /* gap: 0px 10px;  */
+  grid-template-areas: 
+    "section1 section2 section3"; 
+  justify-content: space-between; 
+  align-items: start; 
+  padding: 50px 0px 0px 60px;
+  background: #ebecf0;
+}
 #scotland-section{
   display: flex;
+  flex-wrap: wrap;
   grid-area: section1;
+  justify-content: left;
+
 }
 #france-section{
   display: flex;
+  flex-wrap: wrap;
   grid-area: section2;
+  justify-content: left;
 }
 #romania-section{
-  grid-area: section3;
-}
-header, nav{
-    /* padding: 5px; */
-    background: gold;
-    }
-footer {
-    padding: 1.2em;
-    background: rgb(238, 102, 102);
-    }
-
-
-.button {
-  box-shadow: 0px 1px 0px 0px #fff6af;
-	background:linear-gradient(to bottom, #ffec64 5%, gold 100%);
-	background-color:#ffec64;
-	border-radius:6px;
-	border:1px solid #ffaa22;
-	display:inline-block;
-	cursor:pointer;
-	color:#333333;
-	font-family:Arial;
-	font-size:14px;
-		padding:5px 8px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffee66;
-  
-  
-    } 
-
-.button:hover {
-	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
-	background-color:#ffab23;
-}
-
-/* article {
-  margin: 0 0 20px 0;
-  padding: 20px 10px 5px 10px;
-  background: rgb(167, 2, 2);
-  }   */
-article {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  grid-area:section1;
+  grid-area: section3;
+  justify-content: left;
 }
-  article2{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    grid-area: section2;
-  }
 
-  article3{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    grid-area:section3;
-  }
-  /* flex-basis: 10%; */
-  /* background: rgb(41, 2, 131); */
-  
-  /* -webkit-flex-wrap: wrap;
-  flex-wrap: wrap; */
-  /* max-width: 900px; */
-
-
-
-
-/* section1 {
-  flex: 0 0 15em;  
-  flex-basis: 50%;
-  flex-grow: 1;
-  justify-content: space-around;
-  align-items: start; 
-} */
 
 section {
 
   display: grid; 
   grid-template-columns: 50% 50%;
-  grid-template-rows: 40px 40px 110px 50px 60px;
+  /* grid-template-rows: 40px 40px 110px 50px 20px; */
   /* grid-column-gap: px; */
   grid-row-gap: 5px;
   justify-items: stretch;
@@ -166,52 +58,59 @@ section {
   padding: 0px 10px 20px 10px;
   background: #ffffff;
   text-align: left;
-  /* flex: 0 0 0 20%; */
-  
-  /* border: 1px solid black; */
   border-radius: 3%;
-  -webkit-box-shadow: 7px 6px 9px -6px rgba(0,0,0,0.92); 
-  box-shadow: 7px 6px 9px -6px rgba(0,0,0,0.92);
-  /* width: 33%; */
+  -webkit-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.23); 
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.23);
   width:225px;
   height: 290px;
  
   }  
-
-.section:after {
-  display: block;
-  content: " placeholder ";
-  margin: 10px;
-  flex: 999 999 auto;
-}
-
+  .button {
+    box-shadow: 0px 1px 0px 0px #fff6af;
+    background:linear-gradient(to bottom, #ffec64 5%, gold 100%);
+    background-color:#ffec64;
+    border-radius:3px;
+    border:1px solid rgb(206, 175, 0);
+    display:inline-block;
+    cursor:pointer;
+    color:#333333;
+    font-family:Arial;
+    font-size:12px;
+    padding:5px 8px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffee66;
+   } 
   
-#header {
-  grid-area: header;
-  }
-#footer {
-  grid-area: footer;
+  .button:hover {
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color:#ffab23;
   }
 
-#side { 
-  grid-area: nav; 
+  p {
+    font-size: 14px; 
+    color: rgb(41, 41, 41); 
+    font-family: sans-serif;
   }
 
+h1, h2, h3, li, a {
+    display: block;
+    padding: 0px 0px 0px 0px;
+    font-family: sans-serif;
+    }
 
+h1 {
+  font-size: 2em;
+   }
 
-
-/* Stack the layout on small devices/viewports. */
-/* @media all and (max-width: 575px) {
-  body { 
-    grid-template-areas: 
-      "header"
-      "main"
-      "side"
-      "footer";
-    grid-template-rows: 80px 1fr 70px 1fr 70px;  
-    grid-template-columns: 1fr;
-  }
-} */
+h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    }
+h3 {
+     font-size: 1.17em;
+    }
 
 nav {
   display: flex;
@@ -222,14 +121,11 @@ nav ul {
     list-style-type: none;
     } 
 nav ul {
-    /* padding: 1rem 2rem; */
     color: rgb(26, 26, 26);
     text-align: center;
-    /* padding: 4px 16px; */
     margin: 0;
     padding: 0;
     overflow: hidden;
-  
     }
 
 li {
@@ -242,9 +138,6 @@ li {
       width: 200px;
     }
 
-li:last-child {
-    border-left: none;
-    }
 
 li a {
     display: block;
@@ -253,32 +146,33 @@ li a {
     padding: 25px 15px 25px 15px;
     text-decoration: none;
     text-transform: uppercase;
+    background:linear-gradient(to bottom, #ffec64 5%, gold 100%);
+    background-color:#ffec64;
    
     }
 
-    
-    /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: rgb(206, 175, 0);
-   
-    
+  background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+  background-color:#ffab23;
+
     }
 
-article1 .goal_desc p{
+#scotland-section .goal_desc p{
   color:#3E13AF;
   }
-article2 .goal_desc p{
-  color:rgb(131, 186, 2);
+#france-section .goal_desc p{
+  color: rgb(121, 0, 115);
   }
 
-article3 .goal_desc p{
-  color:rgb(121, 0, 115);
+#romania-section .goal_desc p{
+  color: #005727;
   
   }
 
 article2 section{
   background-color: rgb(252, 252, 252);
 }
+
 .goal_desc{
   font-size: 14px;
   text-decoration: none;
@@ -309,7 +203,7 @@ article2 section{
 
 .mile_title a{
   text-decoration: none;
-  color: brown;
+  color: rgb(9, 9, 9);
   }
 
 .mile_desc{
@@ -340,29 +234,64 @@ article2 section{
    padding: 10px 0 10px 0;
   }
 
-/* .completed{
-  font-size: 14px;
-  text-decoration: none;
-  text-align: left;
-  height: auto;
-  grid-row-start: 5;
-   grid-column-start: 1;
-
-   grid-row-end: 6;
-   grid-column-end: 2;
-   padding: 10px 0 0px 0;
-  
-  } */
-
 .mile_position{
   font-size: 14px;
   text-decoration: none;
   text-align: right;
   height: auto;
   grid-row-start: 5;
-   grid-column-start: 2;
-
-   grid-row-end: 6;
-   grid-column-end: 3;
-   padding: 0px 20px 0px 0;
+  grid-column-start: 2;
+  grid-row-end: 6;
+  grid-column-end: 3;
+  padding: 0px 20px 0px 0;
   }
+
+  .completed{
+  font-size: 14px;
+  text-decoration: none;
+  text-align: left;
+  height: auto;
+  grid-row-start: 5;
+  grid-column-start: 1;
+  grid-row-end: 6;
+  grid-column-end: 2;
+  padding: 0px 0px 0px 0;
+  }
+
+/* NEW FORM */
+
+#new-form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: relative;
+  margin: auto;
+  width: 30%;
+  border: 1px solid gold;
+  padding: 10px;
+
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}

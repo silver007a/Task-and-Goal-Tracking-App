@@ -12,7 +12,10 @@
     <div class="goal_desc">
       <p>{{milestone.goal.title}}</p>
     </div>
-
+    <div class="mile_position">
+      <p>{{milestone.mile_position}}</p>
+    </div>
+    
     <div class="mile_title">
       <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}</a>
     </div>
@@ -33,9 +36,7 @@
         <button class="button">DONE</button>
       </form>
     </div>
-    <div class="mile_position">
-      <p>{{milestone.mile_position}}</p>
-    </div>
+   
   </section>
 
 
@@ -53,7 +54,10 @@
       <div class="goal_desc">
         <p>{{milestone.goal.title}}</p>
       </div>
-  
+      <div class="mile_position">
+        <p>{{milestone.mile_position}}</p>
+      </div>
+     
       <div class="mile_title">
         <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}</a>
       </div>
@@ -64,19 +68,17 @@
        
       
   
+     
       <div class="mile_date">
         <p>{{milestone.mile_date}}</p>
       </div>
-      
       <div class="completed">
   
         <form action="/goals/{{milestone.id}}/delete" method="POST">
           <button class="button">DONE</button>
         </form>
       </div>
-      <div class="mile_position">
-        <p>{{milestone.mile_position}}</p>
-      </div>
+     
     </section>
   
   
@@ -96,7 +98,10 @@
         <div class="goal_desc">
           <p>{{milestone.goal.title}}</p>
         </div>
-    
+        <div class="mile_position">
+          <p>{{milestone.mile_position}}</p>
+        </div>
+       
         <div class="mile_title">
           <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}</a>
         </div>
@@ -107,19 +112,17 @@
          
         
     
+        
         <div class="mile_date">
           <p>{{milestone.mile_date}}</p>
         </div>
-        
         <div class="completed">
     
           <form action="/goals/{{milestone.id}}/delete" method="POST">
             <button class="button">DONE</button>
           </form>
         </div>
-        <div class="mile_position">
-          <p>{{milestone.mile_position}}</p>
-        </div>
+        
       </section>
   
     
