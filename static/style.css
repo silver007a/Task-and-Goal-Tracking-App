@@ -1,39 +1,9 @@
 
-
-  /* FLEXBOX */
-
-body { 
-    display: grid ;
-    grid-template-areas: 
-      "header header header"
-      "main main main"
-      "footer footer footer";
-    /* grid-template-rows: 80px 1fr 70px;   */
-    grid-template-columns: auto auto auto;
-    grid-row-gap: 0px;
-    grid-column-gap: 0px;
-    /* height: 100vh; */
-    margin: 0;
-  }  
  
-  #header {
-    grid-area: header;
-    }
-  #footer {
-    grid-area: footer;
-    }
-  
-  #side { 
-    grid-area: nav; 
-    }
-    header, nav{
-      /* padding: 5px; */
-      background: gold;
-      }
-  footer {
-      padding: 1.2em;
-      background: rgb(238, 102, 102);
-      }
+header, nav{
+  /* padding: 5px; */
+  background: gold;
+  }
 
 #main-section {
   display: grid; 
@@ -72,7 +42,7 @@ section {
 
   display: grid; 
   grid-template-columns: 50% 50%;
-  grid-template-rows: 40px 40px 110px 50px 60px;
+  /* grid-template-rows: 40px 40px 110px 50px 20px; */
   /* grid-column-gap: px; */
   grid-row-gap: 5px;
   justify-items: stretch;
@@ -89,8 +59,8 @@ section {
   background: #ffffff;
   text-align: left;
   border-radius: 3%;
-  -webkit-box-shadow: 7px 6px 9px -6px rgba(0,0,0,0.92); 
-  box-shadow: 7px 6px 9px -6px rgba(0,0,0,0.92);
+  -webkit-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.23); 
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.23);
   width:225px;
   height: 290px;
  
@@ -99,7 +69,7 @@ section {
     box-shadow: 0px 1px 0px 0px #fff6af;
     background:linear-gradient(to bottom, #ffec64 5%, gold 100%);
     background-color:#ffec64;
-    border-radius:6px;
+    border-radius:3px;
     border:1px solid rgb(206, 175, 0);
     display:inline-block;
     cursor:pointer;
@@ -109,9 +79,7 @@ section {
     padding:5px 8px;
     text-decoration:none;
     text-shadow:0px 1px 0px #ffee66;
-    
-    
-      } 
+   } 
   
   .button:hover {
     background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
@@ -132,9 +100,7 @@ h1, h2, h3, li, a {
 
 h1 {
   font-size: 2em;
-  
- 
-    }
+   }
 
 h2 {
     font-size: 20px;
@@ -155,10 +121,8 @@ nav ul {
     list-style-type: none;
     } 
 nav ul {
-    /* padding: 1rem 2rem; */
     color: rgb(26, 26, 26);
     text-align: center;
-    /* padding: 4px 16px; */
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -174,9 +138,6 @@ li {
       width: 200px;
     }
 
-li:last-child {
-    border-left: none;
-    }
 
 li a {
     display: block;
@@ -200,11 +161,11 @@ li a:hover {
   color:#3E13AF;
   }
 #france-section .goal_desc p{
-  color: #C6A700;
+  color: rgb(121, 0, 115);
   }
 
 #romania-section .goal_desc p{
-  color:rgb(121, 0, 115);
+  color: #005727;
   
   }
 
@@ -279,11 +240,22 @@ article2 section{
   text-align: right;
   height: auto;
   grid-row-start: 5;
-   grid-column-start: 2;
+  grid-column-start: 2;
+  grid-row-end: 6;
+  grid-column-end: 3;
+  padding: 0px 20px 0px 0;
+  }
 
-   grid-row-end: 6;
-   grid-column-end: 3;
-   padding: 0px 20px 0px 0;
+  .completed{
+  font-size: 14px;
+  text-decoration: none;
+  text-align: left;
+  height: auto;
+  grid-row-start: 5;
+  grid-column-start: 1;
+  grid-row-end: 6;
+  grid-column-end: 2;
+  padding: 0px 0px 0px 0;
   }
 
 /* NEW FORM */
@@ -294,7 +266,7 @@ article2 section{
   padding: 20px;
   position: relative;
   margin: auto;
-  width: 60%;
+  width: 30%;
   border: 1px solid gold;
   padding: 10px;
 
