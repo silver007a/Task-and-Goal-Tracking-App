@@ -16,7 +16,7 @@ def save(milestone):
 def select_all():
     milestone = []
 
-    sql = "SELECT * FROM milestone"
+    sql = "SELECT * FROM milestone ORDER BY mile_position"
     results = run_sql(sql)
 
     for row in results:

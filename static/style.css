@@ -1,23 +1,26 @@
 p {
-    font-size: 110%; 
+    font-size: 14px; 
     color: rgb(41, 41, 41); 
     font-family: sans-serif;
   }
 
 h1, h2, h3, li, a {
     display: block;
-    padding: 0px 0px 20px 10px;
+    padding: 0px 0px 0px 0px;
     font-family: sans-serif;
     }
 
 h1 {
   font-size: 2em;
+  
  
     }
 
 h2 {
     font-size: 20px;
     text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
     }
 h3 {
      font-size: 1.17em;
@@ -38,7 +41,33 @@ body {
     grid-column-gap: 0px;
     /* height: 100vh; */
     margin: 0;
-    }  
+  }  
+main { 
+    display: grid ;
+    grid-template-areas: 
+      "section1 section2 section3";
+     
+    /* grid-template-rows: 80px 1fr 70px;   */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 0px;
+    grid-column-gap: 50px;
+    /* height: 100vh; */
+    margin: 0;
+    padding: 50px 20px 20px 20px;
+    background: #ebecf0;
+  }  
+
+#scotland-section{
+  display: flex;
+  grid-area: section1;
+}
+#france-section{
+  display: flex;
+  grid-area: section2;
+}
+#romania-section{
+  grid-area: section3;
+}
 header, nav{
     /* padding: 5px; */
     background: gold;
@@ -48,15 +77,29 @@ footer {
     background: rgb(238, 102, 102);
     }
 
-main {
-    padding: 20px 20px 20px 20px;
-    background: rgb(238, 238, 238);
-    }
-button {
-  font-size: 110%;
-  background: rgb(149, 189, 6);
+
+.button {
+  box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, gold 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:14px;
+		padding:5px 8px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+  
   
     } 
+
+.button:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
 
 /* article {
   margin: 0 0 20px 0;
@@ -68,40 +111,80 @@ article {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  flex-basis: 10%;
-  background: rgb(41, 2, 131);
+  grid-area:section1;
+}
+  article2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    grid-area: section2;
+  }
+
+  article3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    grid-area:section3;
+  }
+  /* flex-basis: 10%; */
+  /* background: rgb(41, 2, 131); */
   
   /* -webkit-flex-wrap: wrap;
   flex-wrap: wrap; */
   /* max-width: 900px; */
-}
+
+
+
+
+/* section1 {
+  flex: 0 0 15em;  
+  flex-basis: 50%;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: start; 
+} */
+
 section {
 
   display: grid; 
   grid-template-columns: 50% 50%;
-  grid-template-rows: 40px 30px auto 30px 20px;
-  grid-column-gap: 5px;
+  grid-template-rows: 40px 40px 110px 50px 60px;
+  /* grid-column-gap: px; */
   grid-row-gap: 5px;
   justify-items: stretch;
-  align-items: start;
+  align-items: auto;
   grid-template-areas: 
     "goal_desc goal_desc"
     "mile_title mile_title"
-    "mile_date mile_date"
     "mile_desc mile_desc"
+    "mile_date mile_date"
     "completed mile_position"; 
-    
+  
   margin: 0 20px 20px 0;
-  padding: 0px 10px 10px 10px;
-  background: rgb(149, 189, 6);
+  padding: 0px 10px 20px 10px;
+  background: #ffffff;
   text-align: left;
   /* flex: 0 0 0 20%; */
   
-  border: 5px solid black;
+  /* border: 1px solid black; */
+  border-radius: 3%;
+  -webkit-box-shadow: 7px 6px 9px -6px rgba(0,0,0,0.92); 
+  box-shadow: 7px 6px 9px -6px rgba(0,0,0,0.92);
   /* width: 33%; */
-  flex-basis: 10%;
-  flex-grow: 1;
+  width:225px;
+  height: 290px;
+ 
   }  
+
+.section:after {
+  display: block;
+  content: " placeholder ";
+  margin: 10px;
+  flex: 999 999 auto;
+}
+
   
 #header {
   grid-area: header;
@@ -109,10 +192,7 @@ section {
 #footer {
   grid-area: footer;
   }
-#main { 
-  grid-area: main;  
-  justify-self: start;    
-  }
+
 #side { 
   grid-area: nav; 
   }
@@ -153,9 +233,12 @@ nav ul {
     }
 
 li {
+  font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
       float: left;
-      border-right:1px solid crimson;
-      border-left:1px solid crimson;
+      border-right:1px solid rgb(206, 175, 0);
+      border-left:1px solid rgb(206, 175, 0);
       width: 200px;
     }
 
@@ -167,7 +250,7 @@ li a {
     display: block;
     color: rgb(43, 43, 43);
     text-align: center;
-    padding: 35px 15px 35px 15px;
+    padding: 25px 15px 25px 15px;
     text-decoration: none;
     text-transform: uppercase;
    
@@ -177,9 +260,25 @@ li a {
     /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: rgb(206, 175, 0);
+   
     
     }
 
+article1 .goal_desc p{
+  color:#3E13AF;
+  }
+article2 .goal_desc p{
+  color:rgb(131, 186, 2);
+  }
+
+article3 .goal_desc p{
+  color:rgb(121, 0, 115);
+  
+  }
+
+article2 section{
+  background-color: rgb(252, 252, 252);
+}
 .goal_desc{
   font-size: 14px;
   text-decoration: none;
@@ -190,6 +289,9 @@ li a:hover {
   grid-column-start: 1;
   grid-row-end: 2;
   grid-column-end: 3;
+  
+  padding: 0px 0 10px 0;
+  border-bottom: rgba(126, 126, 126, 0.92) 1px solid;
   }
 
 .mile_title{
@@ -201,6 +303,8 @@ li a:hover {
   grid-column-start: 1;
   grid-row-end: 3;
   grid-column-end: 3;
+  padding: 10px 0 10px 0;
+  border-bottom: rgba(126, 126, 126, 0.92) 1px solid;
 }
 
 .mile_title a{
@@ -214,9 +318,12 @@ li a:hover {
   text-align: left;
   height: auto;
   grid-row-start: 3;
-  grid-column-start: 1;
-  grid-row-end: 4;
-  grid-column-end: 3;
+   grid-column-start: 1;
+
+   grid-row-end: 4;
+   grid-column-end: 3;
+   padding: 0px 0 10px 0;
+   /* border-bottom: rgba(126, 126, 126, 0.92) 1px solid; */
   }
 
 .mile_date{
@@ -225,30 +332,37 @@ li a:hover {
   text-align: left;
   height: auto;
   grid-row-start: 4;
-  grid-column-start: 1;
-  grid-row-end: 5;
-  grid-column-end: 3;
+   grid-column-start: 1;
 
+   grid-row-end: 5;
+   grid-column-end: 3;
+   justify-content: left;  
+   padding: 10px 0 10px 0;
   }
 
-.completed{
+/* .completed{
   font-size: 14px;
   text-decoration: none;
   text-align: left;
   height: auto;
   grid-row-start: 5;
-  grid-column-start: 1;
-  grid-row-end: 6;
-  grid-column-end: 2;
-  }
+   grid-column-start: 1;
+
+   grid-row-end: 6;
+   grid-column-end: 2;
+   padding: 10px 0 0px 0;
+  
+  } */
 
 .mile_position{
   font-size: 14px;
   text-decoration: none;
   text-align: right;
   height: auto;
-  grid-row-end: 5;
-  grid-column-end: 2;
-  grid-row-end: 6;
-  grid-column-end: 3;
+  grid-row-start: 5;
+   grid-column-start: 2;
+
+   grid-row-end: 6;
+   grid-column-end: 3;
+   padding: 0px 20px 0px 0;
   }
