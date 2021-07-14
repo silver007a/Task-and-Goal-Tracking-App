@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- <h2>All milestones</h2> -->
-<main id="main-section">
+  
 <article id="scotland-section">
 
 {% for milestone in all_milestones %}
 {% if milestone.goal.title == "Scotland" %}
 
-  <section>
+  <section >
     
     <div class="goal_desc">
       <p>{{milestone.goal.title}}</p>
@@ -49,7 +49,7 @@
   {% for milestone in all_milestones %}
   {% if milestone.goal.title == "France" %}
  
-    <section>
+    <section >
       <div class="goal_desc">
         <p>{{milestone.goal.title}}</p>
       </div>
@@ -128,5 +128,4 @@
     {% endif %}
     {% endfor %}
     </article>
-  </main>
 {% endblock %}

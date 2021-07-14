@@ -82,4 +82,4 @@ def update_milestone(id):
 @milestone_blueprint.route("/goals/<id>/delete", methods=["POST"])
 def delete_milestone(id):
     milestone_repository.delete(id)
-    return redirect("/goals")
+    return redirect("/")
