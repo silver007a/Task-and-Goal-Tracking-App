@@ -1,28 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h2>Edit milestone</h2>
+<main id="new-form">
 <form action="/goals/{{milestone.id}}" method="post">
   <div>
-    <label for="mile_title">Title:</label>
-    <input type="text" id="mile_title" name="mile_title" value="{{milestone.mile_title}}" required autofocus>
-  </div>
-  <div>
-    <label for="mile_desc">Description:</label>
-    <input type="text" id="mile_desc" name="mile_desc" value="{{mile_desc}}" required autofocus>
-  </div>
-
-  <div>
-    <label for="mile_position">Position:</label>
-    <input type="text" id="mile_position" name="mile_position" value="{{mile_position}}" required autofocus>
-  </div>
-
-  <div>
-    <label for="mile_date">Date:</label>
-    <input type="text" id="mile_date" name="mile_date" value="{{mile_date}}" required autofocus>
-  </div>
-
-  <div>
-    <label for="goal">Goals:</label>
+    <label for="goal">Goal:</label>
     <select id="goal_id" name="goal_id">
       {% for goal in all_goals %}
         <option value="{{ goal.id }}"
@@ -33,7 +16,30 @@
     </select>
   </div>
 
-  <button type="submit">Update Milestone</button>
+
+  <div>
+    <label for="mile_title">Title:</label>
+    <input type="text" id="mile_title" name="mile_title" value="{{milestone.mile_title}}" required autofocus>
+  </div>
+
+  <div>
+    <label for="mile_desc">Description:</label>
+    <input type="text" id="mile_desc" name="mile_desc" value="{{milestone.mile_desc}}" required autofocus>
+  </div>
+
+  <div>
+    <label for="mile_position">Position:</label>
+    <input type="text" id="mile_position" name="mile_position" value="{{milestone.mile_position}}" required autofocus>
+  </div>
+
+  <div>
+    <label for="mile_date">Date:</label>
+    <input type="text" id="mile_date" name="mile_date" value="{{mile_date}}" required autofocus>
+  </div>
+
+  
+
+  <button class="button" type="submit">UPDATE</button>
 
 </form>
 
