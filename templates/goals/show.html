@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<meta http-equiv="refresh" content="0; URL=/goals/{{milestone.id}}/edit" />
 <h2>Milestone details</h2>
 <main id="new-form">
 <div class="goal_desc">
@@ -19,7 +20,8 @@
   </div>
     
   
-    <p><a href="/goals/{{milestone.id}}/edit">Edit</a></p>
+
+    <p><a href="">Edit</a></p>
   </div>
 </main>
 {% endblock %}

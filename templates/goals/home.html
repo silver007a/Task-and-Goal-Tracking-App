@@ -1,14 +1,90 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- <h2>All milestones</h2> -->
+<main id="home-section">
+<article id="home-article">
 
-  <div>
-    <p>{{goal.title}}</p>
-    <p>{{milestone.mile_title}}</p>
-    <hr>
-    <p>{{milestone.mile_desc}}</p>
-    <p>{{milestone.mile_date}} mins</p>
-    <p>Completed? {{milestone.completed}}</p>
-    <p><a href="/goals/{{milestone.id}}/edit">Edit</a></p>
-  </div>
+{% for milestone in all_milestones %}
+{% if milestone.goal.title == "Scotland" %}
 
-{% endblock %}
+  <section>
+    
+    <div class="goal_desc">
+      <p>{{milestone.goal.title}}</p>
+    </div>
+    <div class="mile_position">
+      <p>{{milestone.mile_position}}</p>
+    </div>
+    
+    <div class="mile_title">
+      <a href="/goals/{{milestone.id}}">{{milestone.mile_title}}</a>
+    </div>
+
+    <div class="mile_desc">
+      <p>{{milestone.mile_desc}}</p>
+    </div>
+     
+    
+
+    <div class="mile_date">
+      <p>{{milestone.mile_date}}</p>
+    </div>
+    
+    <div class="completed">
+
+      <form action="/goals/{{milestone.id}}/delete" method="POST">
+        <button class="button">DONE</button>
+      </form>
+    </div>
+   
+  </section>
+
+
+
+
+{% endif %}
+{% endfor %}
+</article>
+<aside class="aside">
+  <h2>Reasons to go on holiday</h2>
+
+<ul class="aside-list">
+  <li>To build and strengthen relationships</li>
+<li>To improve health and wellbeing</li>
+  <li>To rest and relax</li>
+  <li>To have an adventure</li>
+  <li>To escape</li>
+  <li>For knowledge</li>
+  <li>To mark a special occasion</li>
+  <li>To save money or time</li>
+  <li>To reminisce</li>
+  <li>To escape the thoughts of work and daily grind</li>
+  <li>To spend quality time with my family</li>
+  <li>To get inspiration</li>
+  <li>To have something to look forward to</li>
+  <li>Learn something like a language to improve your career value</li>
+  <li>Life is too short not to</li>
+  <li>Have fun and relax</li>
+  <li>Reduce stress levels</li>
+  <li>To improve health and wellbeing</li>
+  <li>To rest and relax</li>
+  <li>To have an adventure</li>
+  <li>To escape</li>
+  <li>For knowledge</li>
+  <li>To mark a special occasion</li>
+  <li>To save money or time</li>
+  <li>To reminisce</li>
+  <li>To escape the thoughts of work and daily grind</li>
+  <li>To spend quality time with my family</li>
+  <li>To get inspiration</li>
+  <li>To have something to look forward to</li>
+  <li>Learn something like a language to improve your career value</li>
+  <li>Life is too short not to</li>
+  <li>Have fun and relax</li>
+  <li>Reduce stress levels</li>
+
+
+</ul>
+</aside>
+  </main>
+{% endblock %} 

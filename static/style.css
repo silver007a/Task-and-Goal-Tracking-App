@@ -1,15 +1,54 @@
-
- 
 header, nav{
-  /* padding: 5px; */
   background: gold;
   }
 
+#home-section {
+  display: grid; 
+  grid-template-columns: 6fr 2fr ; 
+  grid-template-rows: 1fr; 
+  grid-template-areas: 
+    "grid1 grid2"; 
+  justify-content: space-between; 
+  align-items: start; 
+  padding: 50px 0px 0px 60px;
+  background: #ebecf0;
+}
+#home-article{
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: grid1;
+  justify-content: left;
+}
+#home-article .goal_desc p {
+    color: #3E13AF;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: large;
+}
+.aside{
+  /* display: flex;
+  flex-wrap: wrap; */
+  grid-area: grid2;
+  justify-content: left;
+  text-align: left;
+  padding: 0 10px;
+  background:linear-gradient(to bottom, #ffec64 5%, #ffd700 100%);
+  background-color:#ffec64;
+  margin-right: 20px;
+}
+ul.aside-list {
+  font-size: 14px;
+  list-style-type: circle !important; 
+  display:list-item;
+  padding: 0 0 0 25px;
+}
+
+
+/* MAIN SECTION GRID SETTINGS*/
 #main-section {
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr; 
   grid-template-rows: 1fr; 
-  /* gap: 0px 10px;  */
   grid-template-areas: 
     "section1 section2 section3"; 
   justify-content: space-between; 
@@ -39,7 +78,7 @@ header, nav{
 
 
 
-  .button {
+.button {
     box-shadow: 0px 1px 0px 0px #fff6af;
     background:linear-gradient(to bottom, #ffec64 5%, gold 100%);
     background-color:#ffec64;
@@ -55,7 +94,7 @@ header, nav{
     text-shadow:0px 1px 0px #ffee66;
    } 
   
-  .button:hover {
+.button:hover {
     background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
     background-color:#ffab23;
   }
@@ -102,18 +141,18 @@ nav ul {
     overflow: hidden;
     }
 
-li {
+nav li {
   font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-      float: left;
-      border-right:1px solid rgb(206, 175, 0);
-      border-left:1px solid rgb(206, 175, 0);
-      width: 200px;
+  text-transform: uppercase;
+  text-align: center;
+  float: left;
+  border-right:1px solid rgb(206, 175, 0);
+  border-left:1px solid rgb(206, 175, 0);
+  width: 200px;
     }
 
 
-li a {
+nav li a {
     display: block;
     color: rgb(43, 43, 43);
     text-align: center;
@@ -125,7 +164,7 @@ li a {
    
     }
 
-li a:hover {
+nav li a:hover {
   background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
   background-color:#ffab23;
 
@@ -218,7 +257,7 @@ height: 30px;
 
 
 
-  .completed{
+.completed{
   font-size: 14px;
   text-decoration: none;
   text-align: left;
@@ -267,3 +306,4 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
+
